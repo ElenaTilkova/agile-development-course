@@ -5,7 +5,7 @@ import ru.unn.agile.Triangle.Point;
 
 public class ViewModel
 {
-   /* public static final int ENTER_CODE = 10;               */
+    public static final int ENTER_CODE = 10;
     public String pointA1 = "";
     public String pointA2 = "";
     public String pointB1 = "";
@@ -45,7 +45,8 @@ public class ViewModel
 
     public void enterKeyInTextField(int keyCode)
     {
-        if (keyCode == 0)
+        result = "";
+        if (keyCode == ENTER_CODE)
         {
             calculate();
         }

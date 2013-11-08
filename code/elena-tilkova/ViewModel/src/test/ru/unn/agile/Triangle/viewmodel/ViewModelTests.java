@@ -11,7 +11,7 @@ public class ViewModelTests
 {
     private ViewModel viewModel;
     public static final int ANY_KEY = 1;
-    public static final int ENTER_CODE = 0;
+    public static final int ENTER_CODE = 10;
     @Before
     public void setUp()
     {
@@ -96,8 +96,8 @@ public class ViewModelTests
     {
         viewModel.pointA1 = Double.toString(0);
         viewModel.pointA2 = Double.toString(0);
-        viewModel.pointB1 = Double.toString(1);
-        viewModel.pointB2 = Double.toString(1);
+        viewModel.pointB1 = Double.toString(0);
+        viewModel.pointB2 = Double.toString(0);
         viewModel.pointC1 = Double.toString(0);
         viewModel.pointC2 = Double.toString(0);
         viewModel.enterKeyInTextField(ENTER_CODE);

@@ -1,5 +1,5 @@
 dependencies {
-    compile project(':kirill-kornyakov-ViewModel')
+    compile project(':elena-tilkova-ViewModel')
 }
 
 sourceSets {

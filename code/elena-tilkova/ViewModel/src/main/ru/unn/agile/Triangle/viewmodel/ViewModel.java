@@ -31,7 +31,6 @@ public class ViewModel
         ANGLEC("Angle C");
 
         private final String name;
-
         private Operation(String name)
         {
             this.name = name;
@@ -55,13 +54,16 @@ public class ViewModel
             parseInput();
         }
     }
-    private boolean isInputAvailable() {
+
+    private boolean isInputAvailable()
+    {
         return !pointA1.isEmpty() && !pointA2.isEmpty() && !pointB1.isEmpty() && !pointB2.isEmpty() && !pointC1.isEmpty() && !pointC2.isEmpty();
     }
 
     private boolean parseInput()
     {
-        try {
+        try
+        {
             if (!pointA1.isEmpty()) Double.parseDouble(pointA1);
             if (!pointA2.isEmpty()) Double.parseDouble(pointA2);
             if (!pointB1.isEmpty()) Double.parseDouble(pointB1);
@@ -76,7 +78,8 @@ public class ViewModel
             return false;
         }
         isCalculateButtonEnabled = isInputAvailable();
-        if (isCalculateButtonEnabled) {
+        if (isCalculateButtonEnabled)
+        {
             status = "Data is correct";
         } else {
             status = "";
@@ -85,7 +88,8 @@ public class ViewModel
         return isCalculateButtonEnabled;
     }
 
-    public void calculate() {
+    public void calculate()
+    {
         if (!parseInput()) return;
 
         Point A = new Point(Double.parseDouble(pointA1), Double.parseDouble(pointA2));
@@ -105,7 +109,8 @@ public class ViewModel
             return;
         }
 
-        switch (operation) {
+        switch (operation)
+        {
             case PERIMETR:
                 answer = triangle.perimeter();
                 break;
@@ -137,7 +142,6 @@ public class ViewModel
                 answer = triangle.angle("C");
                 break;
         }
-
         result = Double.toString(answer);
         status = "Done";
     }

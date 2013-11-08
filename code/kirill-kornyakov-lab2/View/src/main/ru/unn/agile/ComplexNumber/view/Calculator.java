@@ -12,13 +12,15 @@ public class Calculator extends ViewModel
     private JButton btnCalc;
 
     // Fields to bind
-    private JTextField txtZ1Re;
-    private JTextField txtZ1Im;
+    private JTextField txtPoinA;
+    private JTextField txtPointA;
     private JTextField txtZ2Re;
     private JTextField txtZ2Im;
     private JComboBox cbOperation;
     private JTextField txtResult;
     private JLabel lbStatus;
+    private JLabel lblPoinaAFirst;
+    private JLabel lblPointASecond;
 
     public Calculator() {
         btnCalc.addActionListener(new ActionListener() {
@@ -31,8 +33,8 @@ public class Calculator extends ViewModel
 
     @Override
     public void bind() {
-        re1 = txtZ1Re.getText();
-        im1 = txtZ1Im.getText();
+        re1 = txtPoinA.getText();
+        im1 = txtPointA.getText();
         re2 = txtZ2Re.getText();
         im2 = txtZ2Im.getText();
 
@@ -44,8 +46,8 @@ public class Calculator extends ViewModel
 
     @Override
     public void unbind() {
-        txtZ1Re.setText(re1);
-        txtZ1Im.setText(im1);
+        txtPoinA.setText(re1);
+        txtPointA.setText(im1);
         txtZ2Re.setText(re2);
         txtZ2Im.setText(im2);
 
@@ -60,5 +62,9 @@ public class Calculator extends ViewModel
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.pack();
         frame.setVisible(true);
+    }
+
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
     }
 }
